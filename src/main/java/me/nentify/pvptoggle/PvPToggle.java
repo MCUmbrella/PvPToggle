@@ -85,7 +85,7 @@ public class PvpToggle {
         }
 
         if (!pvp.get(target.getUniqueId())) {
-            attacker.sendMessage(Text.of(TextColors.RED, "Your target has PvP disabled"));
+            attacker.sendMessage(Text.of(TextColors.RED, "对方已关闭PVP"));
             event.setCancelled(true);
             return;
         }

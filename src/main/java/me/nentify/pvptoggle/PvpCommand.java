@@ -36,7 +36,7 @@ public class PvpCommand implements CommandExecutor {
                         if (!PvpToggle.pvp.get(uuid)) {
                             togglePvp(player);
                         } else {
-                            player.sendMessage(Text.of(TextColors.RED, "You already have PvP enabled!"));
+                            player.sendMessage(Text.of(TextColors.RED, "PVP状态已开启"));
                         }
 
                         return CommandResult.success();
@@ -48,7 +48,7 @@ public class PvpCommand implements CommandExecutor {
                         if (PvpToggle.pvp.get(uuid)) {
                             togglePvp(player);
                         } else {
-                            player.sendMessage(Text.of(TextColors.RED, "You already have PvP disabled!"));
+                            player.sendMessage(Text.of(TextColors.RED, "PVP状态已关闭"));
                         }
 
                         return CommandResult.success();
@@ -71,7 +71,7 @@ public class PvpCommand implements CommandExecutor {
 
         if (cooldowns.containsKey(uuid)) {
             if (cooldowns.get(uuid) > time - (cooldown * 1000) && !player.hasPermission("pvptoggle.nocooldown")) {
-                player.sendMessage(Text.of(TextColors.RED, "You must wait " + (cooldown - ((time - cooldowns.get(uuid)) / 1000)) + " seconds before toggling PvP again"));
+                player.sendMessage(Text.of(TextColors.RED, "请等待 " + (cooldown - ((time - cooldowns.get(uuid)) / 1000)) + " 秒后再切换PVP状态"));
                 return;
             }
 
