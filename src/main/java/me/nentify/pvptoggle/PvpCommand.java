@@ -87,11 +87,11 @@ public class PvpCommand implements CommandExecutor {
         Text text;
 
         if (newValue) {
-            text = Text.builder("PvP enabled ").color(TextColors.DARK_RED)
+            text = Text.builder("PVP状态已开启 ").color(TextColors.DARK_RED)
                     .append(Texts.toggleText)
                     .build();
         } else {
-            text = Text.builder("PvP disabled ").color(TextColors.DARK_GREEN)
+            text = Text.builder("PVP状态已关闭 ").color(TextColors.DARK_GREEN)
                     .append(Texts.toggleText)
                     .build();
         }

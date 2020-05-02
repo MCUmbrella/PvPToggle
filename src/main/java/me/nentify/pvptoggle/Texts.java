@@ -5,7 +5,7 @@ import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 
 public class Texts {
-    public static Text toggleText = Text.builder("[PVP控制]")
+    public static Text toggleText = Text.builder("[切换PVP状态]")
             .color(TextColors.YELLOW)
             .onHover(TextActions.showText(Text.of("控制自身的PVP状态")))
             .onClick(TextActions.runCommand("/pvp"))
