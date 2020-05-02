@@ -58,7 +58,7 @@ public class PvpCommand implements CommandExecutor {
 
             togglePvp(player);
         } else {
-            source.sendMessage(Text.of(TextColors.RED, "You must be a player to use this command"));
+            source.sendMessage(Text.of(TextColors.RED, "只有玩家才能执行"));
         }
 
         return CommandResult.success();

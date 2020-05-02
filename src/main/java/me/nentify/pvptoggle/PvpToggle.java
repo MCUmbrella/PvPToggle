@@ -44,7 +44,7 @@ public class PvpToggle {
         }
 
         CommandSpec pvpToggleCommandSpec = CommandSpec.builder()
-                .description(Text.of("PvP toggle command"))
+                .description(Text.of("PVP状态控制命令"))
                 .permission("pvptoggle.use")
                 .arguments(GenericArguments.optional(GenericArguments.string(Text.of("option"))))
                 .executor(new PvpCommand(config.cooldown))
@@ -79,7 +79,7 @@ public class PvpToggle {
             return;
 
         if (!pvp.get(attacker.getUniqueId())) {
-            attacker.sendMessage(Text.builder("You have PvP disabled ").color(TextColors.RED).append(Texts.toggleText).build());
+            attacker.sendMessage(Text.builder("你已关闭PVP状态 ").color(TextColors.RED).append(Texts.toggleText).build());
             event.setCancelled(true);
             return;
         }

@@ -27,8 +27,8 @@ public class Config {
 
         config = loader.load();
 
-        check("default-pvp", true, "true = PvP is on by default, false = PvP is off by default");
-        check("cooldown", 10, "Cooldown between toggling your PvP status in seconds");
+        check("default-pvp", true, "true = PvP默认开启, false = PvP默认关闭");
+        check("cooldown", 10, "执行PVP控制命令的冷却时间");
 
         loader.save(config);
 
